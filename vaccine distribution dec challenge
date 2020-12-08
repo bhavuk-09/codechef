@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	// your code goes here
+	long long int n,d,i,j,arr[100000],r,nr,sum;
+	int t;
+	cin>>t;
+	for(int k=0;k<t;k++){
+	    r=0;
+	    nr=0;
+	    sum=0;
+	    cin>>n>>d;
+	    for(i=0;i<n;i++){
+	        cin>>arr[i];
+	        if(arr[i]>80 || arr[i]==80 || arr[i]<9 || arr[i]==9){
+	            r++;
+	        }
+	        else nr++;
+	    }
+	        if(r%d==0){
+	            sum+=r/d;
+	        }
+	        else if(r%d!=0){
+	            sum=sum + r/d + 1;
+	        }
+	        if(nr%d==0){
+	            sum+=nr/d;
+	        }
+	        else if(nr%d!=0){
+	            sum=sum + nr/d + 1;
+	        }
+	        
+	    cout<<sum<<endl;
+	}
+	return 0;
+}
